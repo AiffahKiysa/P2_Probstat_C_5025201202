@@ -67,11 +67,11 @@ bartlett.test(Length ~ Group, data = onewayanova)
 model1 = lm(Length ~ Group, data = onewayanova)
 anova(model1)
 
-# d.
+# e.
 #Post-hoc test TukeyHSD
 TukeyHSD(aov(model1))
 
-# e,
+# f.
 install.packages("ggplot2")
 library("ggplot2")
 
@@ -93,7 +93,6 @@ qplot(x = Temp, y = Light, geom = "auto", data = glasstemp) +
 # b.
 glasstemp$Glass <- as.factor(glasstemp$Glass)
 glasstemp$Temp <- as.factor(glasstemp$Temp)
-
 
 anova <- aov(Light ~ Glass*Temp, data = glasstemp)
 summary(anova)
@@ -121,6 +120,6 @@ print(tukey.cld)
 # menambahkan means dan sd ke tabel compact letter display
 cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
 summary$Tukey <- cld$Letters
-print(summary)
+summary
 
 
