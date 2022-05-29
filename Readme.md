@@ -10,6 +10,7 @@ data
 ```
 sd(data$ï..X-data$Y)
 ```
+![1a](img/1.png)
 
 didapatkan standar deviasi sebesar 6.359595
 
@@ -17,6 +18,7 @@ didapatkan standar deviasi sebesar 6.359595
 ```
 t.test(data$Y, data$ï..X, paired=TRUE)
 ```
+![2a](img/2.png)
 
 dari hasil t-test didapatkan t = 7.6525, derajat bebas (df) = 8, dan p-value = 6.003e-05.
 
