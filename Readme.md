@@ -1,4 +1,11 @@
-# 1.
+# P2_Probstat_C_5025201202
+
+|     NRP    |     Nama    |
+| :--------- |:--------    |
+| 5025201202 | Aiffah Kiysa Waafi |
+
+## 1.
+![tabel1](img/tabel1.png)
 
 Data tabel diatas kita simpan dalam bentuk csv agar mudah digunakan, kemudian dilakukan pencarian standar deviasi dan nilai uji t-test.
 ```
@@ -27,7 +34,7 @@ Dari hasil t-test didapatkan t = 7.6525, derajat bebas (df) = 8, dan p-value = 6
 Karena nilai probabilitas (p-value) lebih kecil dibandingkan tingkat signifikansi 𝛼=0,05, maka null hypotesis ditolak dan alternative hypotesis diterima. Hal ini berarti terdapat pengaruh yang signifikan secara statistika dalam hal jumlah kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas A.
 
 
-# 2.
+## 2.
 - Null hypotesis / H0 = miu <= 20.000
 - Alternative hypotesis / H1 = miu > 20.000
 Karena n >= 30 maka menggunakan uji Z-distribution. Terlebih dahulu install package BSDA dengan cara install.packages(“BSDA”). Kemudian diketahui mean = 23500, standar deviasi = 3900, mu = 20000 dan n = 100. Hipotesis yang diuji adalah satu arah maka menggunakan syntaks seperti berikut 
@@ -47,10 +54,12 @@ Dari hasil diatas didapatkan z = 8.97, p-value < 2.2e-16 atau p-value = p(z > 8.
 Kesimpulan bahwa mobil dikemudikan rata-rata lebih dari 20000 km/tahun benar.
 
 
-# 3.
+## 3.
+![tabel2](img/tabel2.png)
+
 ### a. H0 dan H1
-- H0 = ada perbedaan pada rata-rata
-- H1 = tidak ada perbedaan pada rata-rata
+- H0 = tidak terdapat perbedaan antara rata-rata saham bandung dengan rata-rata saham bali
+- H1 = terdapat perbedaan antara rata-rata saham bandung dengan rata-rata saham bali
 
 ### b. Hitung Sampel Statistik
 ```
@@ -76,13 +85,16 @@ qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 ![3d](img/3d.png)
 
 ### e. Keputusan
-
+Dari hasil t-test didapatkan p-value = 0.03024, berada dibawah 0.05. Maka null hypotesis / H0 ditolak.
 
 ### f. Kesimpulan
+Kesimpulannya terdapat perbedaan antara rata-rata saham bandung dengan rata-rata saham bali.
 
 
+## 4.
+Diketahui dataset https://intip.in/datasetprobstat1
+H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
 
-# 4.
 ```
 onewayanova = read.table("onewayanova.txt",h=T)
 onewayanova
@@ -150,7 +162,18 @@ ggplot(onewayanova, aes(x = Group, y = Length)) +
 ```
 ![4f](img/4f.png)
 
-# 5.
+
+
+## 5.
+Percobaan dilakukan sebanyak 27 kali dan didapat data sebagai berikut: https://drive.google.com/file/d/1aLUOdw_LVJq6VQrQEkuQhZ8FW43FemTJ/view.
+
+Langkah pertama yaitu mengimport data dari GTL.csv dan mengecek struktur dari data seperti berikut
+```
+glasstemp = read.csv("GTL.csv")
+glasstemp
+# check structure
+str(glasstemp)
+```
 
 ### a. Buatlah plot sederhana untuk visualisasi data
 ```
@@ -158,6 +181,8 @@ qplot(x = Temp, y = Light, geom = "auto", data = glasstemp) +
   facet_grid(.~Glass, labeller = label_both)
 ```
 ![5a](img/5a.png)
+
+Dapat dilihat bahwa cahaya pada glass A dan B meningkat seiring dengan meningkatnya suhu, sedangkan pada glass C maksimum berada pada 125 C.
 
 ### b. Lakukan uji ANOVA dua arah
 ```
