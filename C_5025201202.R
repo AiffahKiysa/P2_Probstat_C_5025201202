@@ -3,10 +3,13 @@ data <- read.csv("saturasi_oksigen.csv")
 data
 
 # a.
-sd(data$ï..X-data$Y)
+sd(data$ï¿½..X-data$Y)
 
 # b.
-t.test(data$Y, data$ï..X, paired=TRUE)
+t.test(data$Y, data$ï¿½..X, paired=TRUE)
+
+# c.
+# nilai probabilitas (p-value) lebih kecil dibandingkan tingkat signifikansi ğ›¼=0,05, maka null hypotesis ditolak dan alternative hypotesis diterima
 
 # 2.
 install.packages("BSDA")
@@ -18,6 +21,10 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 
 
 # 3.
+# a.
+# h0 = rata" sama
+# h1 = rata" tidak sama
+
 # b.
 tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19, 
           mean.y=2.79, s.y = 1.32, n.y = 27, alternative = "greater", 
@@ -32,6 +39,11 @@ plotDist(dist='t', df=2, col="red")
 # d.
 qchisq(p = 0.05, df = 2, lower.tail=FALSE)
 
+# e.
+# h0 salah
+
+# f
+# ada perbedaan rata" kedua saham
 
 # 4.
 onewayanova = read.table("onewayanova.txt",h=T)
@@ -66,6 +78,9 @@ bartlett.test(Length ~ Group, data = onewayanova)
 #lm = linier model
 model1 = lm(Length ~ Group, data = onewayanova)
 anova(model1)
+
+# d
+#  menolak null hypotesis / H0, maka menunjukkan adanya perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
 
 # e.
 #Post-hoc test TukeyHSD
