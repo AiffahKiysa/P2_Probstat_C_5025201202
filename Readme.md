@@ -5,9 +5,7 @@
 | 5025201202 | Aiffah Kiysa Waafi |
 
 ## 1. 
-<span style="color: green">
 Seorang peneliti melakukan penelitian mengenai pengaruh aktivitas 𝐴 terhadap kadar saturasi oksigen pada manusia. Peneliti tersebut mengambil sampel sebanyak 9 responden. Pertama, sebelum melakukan aktivitas 𝐴, peneliti mencatat kadar saturasi oksigen dari 9 responden tersebut. Kemudian, 9 responden tersebut diminta melakukan aktivitas 𝐴. Setelah 15 menit, peneliti tersebut mencatat kembali kadar saturasi oksigen dari 9 responden tersebut. Berikut data dari 9 responden mengenai kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas 𝐴
-</span>
 
 ![tabel1](img/tabel1.png)
 
@@ -39,6 +37,8 @@ Karena nilai probabilitas (p-value) lebih kecil dibandingkan tingkat signifikans
 
 
 ## 2.
+Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun. Untuk menguji klaim ini, 100 pemilik mobil yang dipilih secara acak diminta untuk mencatat jarak yang mereka tempuh. Jika sampel acak menunjukkan rata-rata 23.500 kilometer dan standar deviasi 3900 kilometer. (Kerjakan menggunakan library seperti referensi pada modul).
+
 - Null hypotesis / H0 = miu <= 20.000
 - Alternative hypotesis / H1 = miu > 20.000
 Karena n >= 30 maka menggunakan uji Z-distribution. Terlebih dahulu install package BSDA dengan cara install.packages(“BSDA”). Kemudian diketahui mean = 23500, standar deviasi = 3900, mu = 20000 dan n = 100. Hipotesis yang diuji adalah satu arah maka menggunakan syntaks seperti berikut 
@@ -59,7 +59,11 @@ Kesimpulan bahwa mobil dikemudikan rata-rata lebih dari 20000 km/tahun benar.
 
 
 ## 3.
+Diketahui perusahaan memiliki seorang data analyst ingin memecahkan permasalahan pengambilan keputusan dalam perusahaan tersebut. Selanjutnya didapatkanlah data berikut dari perusahaan saham tersebut.
+
 ![tabel2](img/tabel2.png)
+
+Dari data diatas berilah keputusan serta kesimpulan yang didapatkan dari hasil diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada rata-ratanya (α= 0.05)? Buatlah :
 
 ### a. H0 dan H1
 - H0 = tidak terdapat perbedaan antara rata-rata saham bandung dengan rata-rata saham bali
@@ -96,6 +100,7 @@ Kesimpulannya terdapat perbedaan antara rata-rata saham bandung dengan rata-rata
 
 
 ## 4.
+Seorang Peneliti sedang meneliti spesies dari kucing di ITS . Dalam penelitiannya ia mengumpulkan data tiga spesies kucing yaitu kucing oren, kucing hitam dan kucing putih dengan panjangnya masing-masing. Jika :
 Diketahui dataset https://intip.in/datasetprobstat1
 H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
 
@@ -169,7 +174,7 @@ ggplot(onewayanova, aes(x = Group, y = Length)) +
 
 
 ## 5.
-Percobaan dilakukan sebanyak 27 kali dan didapat data sebagai berikut: https://drive.google.com/file/d/1aLUOdw_LVJq6VQrQEkuQhZ8FW43FemTJ/view.
+Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca pelat muka (A, B dan C) pada keluaran cahaya tabung osiloskop. Percobaan dilakukan sebanyak 27 kali dan didapat data sebagai berikut: https://drive.google.com/file/d/1aLUOdw_LVJq6VQrQEkuQhZ8FW43FemTJ/view.
 
 Langkah pertama yaitu mengimport data dari GTL.csv dan mengecek struktur dari data seperti berikut
 ```
