@@ -4,7 +4,11 @@
 | :--------- |:--------    |
 | 5025201202 | Aiffah Kiysa Waafi |
 
-## 1.
+## 1. 
+<p style="color: green">
+Seorang peneliti melakukan penelitian mengenai pengaruh aktivitas 𝐴 terhadap kadar saturasi oksigen pada manusia. Peneliti tersebut mengambil sampel sebanyak 9 responden. Pertama, sebelum melakukan aktivitas 𝐴, peneliti mencatat kadar saturasi oksigen dari 9 responden tersebut. Kemudian, 9 responden tersebut diminta melakukan aktivitas 𝐴. Setelah 15 menit, peneliti tersebut mencatat kembali kadar saturasi oksigen dari 9 responden tersebut. Berikut data dari 9 responden mengenai kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas 𝐴
+</p>
+
 ![tabel1](img/tabel1.png)
 
 Data tabel diatas kita simpan dalam bentuk csv agar mudah digunakan, kemudian dilakukan pencarian standar deviasi dan nilai uji t-test.
