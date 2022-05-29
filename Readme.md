@@ -25,8 +25,8 @@ dari hasil t-test didapatkan t = 7.6525, derajat bebas (df) = 8, dan p-value = 6
 Karena nilai probabilitas (p-value) lebih kecil dibandingkan tingkat signifikansi 𝛼=0,05, maka null hypotesis ditolak dan alternative hypotesis diterima. Hal ini berarti terdapat pengaruh yang signifikan secara statistika dalam hal jumlah kadar saturasi oksigen sebelum dan sesudah melakukan aktivitas A.
 
 # 2.
-null hypotesis / H0 = miu <= 20.000
-alternative hypotesis / H1 = miu > 20.000
+Null hypotesis / H0 = miu <= 20.000
+Alternative hypotesis / H1 = miu > 20.000
 
 Karena n >= 30 maka menggunakan uji Z-distribution. Terlebih dahulu install package BSDA dengan cara install.packages(“BSDA”). Kemudian diketahui mean = 23500, standar deviasi = 3900, mu = 20000 dan n = 100. Hipotesis yang diuji adalah satu arah maka menggunakan syntaks seperti berikut 
 
@@ -39,27 +39,35 @@ zsum.test(mean.x=23500, sigma.x = 3900, n.x = 100,
 ### a. Apakah Anda setuju dengan klaim tersebut? 
 Ya, setuju
 ### b. Jelaskan maksud dari output yang dihasilkan!
-    Dari hasil diatas didapatkan z = 8.97, p-value < 2.2e-16 atau p-value = p(z > 8.97) = 1-p(z < 8.97) = 0. Maka null hypotesis salah.
+Dari hasil diatas didapatkan z = 8.97, p-value < 2.2e-16 atau p-value = p(z > 8.97) = 1-p(z < 8.97) = 0. Maka null hypotesis salah.
 ### c. Buatlah kesimpulan berdasarkan P-Value yang dihasilkan!
 Kesimpulan bahwa mobil dikemudikan rata-rata lebih dari 20000 km/tahun benar.
 
 
 # 3.
 ### a. H0 dan H1
+H0 = ada perbedaan pada rata-rata
+H1 = tidak ada perbedaan pada rata-rata
 
 ### b. Hitung Sampel Statistik
+```
 tsum.test(mean.x=3.64, s.x = 1.67, n.x = 19, 
           mean.y=2.79, s.y = 1.32, n.y = 27, alternative = "greater", 
           mu = 0, var.equal = TRUE,
           conf.level = 0.90)
+```
 
 ### c. Lakukan Uji Statistik (df =2)
+```
 install.packages("mosaic")
 library(mosaic)
 plotDist(dist='t', df=2, col="red")
+```
 
 ### d. Nilai Kritikal
+```
 qchisq(p = 0.05, df = 2, lower.tail=FALSE)
+```
 
 ### e. Keputusan
 
